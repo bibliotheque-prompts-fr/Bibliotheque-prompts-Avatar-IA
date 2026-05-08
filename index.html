@@ -1,0 +1,435 @@
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<script>
+    tailwind.config = {
+        theme: {
+            extend: {
+                colors: {
+                    'bg': '#FAFAF8',
+                    'dark': '#0D0D0D',
+                    'accent': '#FF6B00',
+                    'gray-text': '#777777',
+                    'gray-dark': '#4A4A4A',
+                    'border-light': '#E5E5E5',
+                    'card-cream': '#F0EDE8',
+                    'bg-warm': '#F5F2EE',
+                },
+                fontFamily: {
+                    'title': ['"Playfair Display"', 'serif'],
+                    'body': ['"Poppins"', 'sans-serif'],
+                },
+            }
+        }
+    }
+</script>
+
+<style>
+    .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s cubic-bezier(0.5, 0, 0, 1); }
+    .reveal.active { opacity: 1; transform: translateY(0); }
+    
+    .avatar-stack { margin-left: -12px; border: 3px solid white; }
+    .avatar-stack:first-child { margin-left: 0; }
+    
+    .marquee-track { display: flex; gap: 24px; animation: marquee 40s linear infinite; padding: 0 12px; }
+    .marquee-track-reverse { animation-direction: reverse; }
+    .marquee-wrapper:hover .marquee-track { animation-play-state: paused; }
+    
+    @keyframes marquee {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(-50%); }
+    }
+</style>
+
+<div class="font-body bg-bg text-dark antialiased leading-relaxed">
+
+    <!-- Header Navigation -->
+    <header class="flex justify-between items-center py-5 px-[5%] bg-bg sticky top-0 z-[1000] max-md:py-4">
+        <div class="flex items-center gap-1 text-sm uppercase">
+            <span class="font-bold tracking-[1.5px] text-dark">AVATAR</span>
+            <span class="font-title italic font-bold text-dark normal-case">CASH</span>
+            <span class="font-bold text-accent">SYSTEM</span>
+        </div>
+
+        <nav class="max-md:hidden">
+            <ul class="flex gap-8 list-none">
+                <li><a href="#preview" class="text-dark text-sm font-normal hover:text-accent transition-colors">Aperçu</a></li>
+                <li><a href="#who" class="text-dark text-sm font-normal hover:text-accent transition-colors">Pour qui</a></li>
+                <li><a href="#reviews" class="text-dark text-sm font-normal hover:text-accent transition-colors">Avis</a></li>
+                <li><a href="#affiliate" class="text-dark text-sm font-normal hover:text-accent transition-colors">Affiliation</a></li>
+            </ul>
+        </nav>
+
+        <a href="#access" class="bg-dark text-white py-2.5 px-6 rounded-lg font-bold text-sm hover:bg-accent transition-all duration-300">Accéder →</a>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="max-w-[1200px] mx-auto text-center py-24 px-10 max-md:py-16 max-md:px-5 reveal">
+        <div class="max-w-[900px] mx-auto">
+            <h1 class="leading-[1.1] mb-6">
+                <span class="font-body text-[clamp(38px,6vw,64px)] font-bold text-dark block">Crée du contenu avec ton avatar IA</span>
+                <span class="font-title text-[clamp(40px,7vw,68px)] italic font-bold text-accent">qui arrête le scroll.</span>
+            </h1>
+
+            <p class="text-lg text-gray-text max-w-[580px] mx-auto mt-6 leading-relaxed max-md:text-base">
+                Plus de 100 prompts premium testés et validés pour transformer le look de ton avatar IA — homme, femme, hijab, tous les styles.
+            </p>
+
+            <div class="flex justify-center items-center gap-4 mt-10 max-md:flex-col max-md:w-full max-md:gap-3">
+                <a href="https://boutique.promptacademie.com/prd_fd9vg4/checkout" class="bg-dark text-white py-4 px-9 rounded-lg font-bold text-base border-[1.5px] border-dark hover:bg-accent hover:border-accent hover:-translate-y-0.5 transition-all duration-300 inline-block max-md:w-full max-md:text-center">Accéder à la bibliothèque →</a>
+            </div>
+
+            <div class="flex justify-center items-center gap-3 mt-8">
+                <div class="flex">
+                    <div class="w-9 h-9 rounded-full border-2 border-white bg-cover bg-center shadow-md avatar-stack" style="background-image: url('https://res.cloudinary.com/drpfy1syr/image/upload/v1778016857/pexels-theo-decker-5945252_ddnt7l.jpg'); background-color: #FF6B00;"></div>
+                    <div class="w-9 h-9 rounded-full border-2 border-white bg-cover bg-center shadow-md avatar-stack" style="background-image: url('https://res.cloudinary.com/drpfy1syr/image/upload/v1778016896/pexels-artempodrez-7048346_fnysqh.jpg'); background-color: #0D0D0D;"></div>
+                    <div class="w-9 h-9 rounded-full border-2 border-white bg-cover bg-center shadow-md avatar-stack" style="background-image: url('https://res.cloudinary.com/drpfy1syr/image/upload/v1778016849/pexels-goodcitizen-2058661_r01xnz.jpg'); background-color: #FF6B00;"></div>
+                    <div class="w-9 h-9 rounded-full border-2 border-white bg-cover bg-center shadow-md avatar-stack" style="background-image: url('https://res.cloudinary.com/drpfy1syr/image/upload/v1778016823/pexels-ono-kosuki-5648098_ym64mf.jpg'); background-color: #0D0D0D;"></div>
+                    <div class="w-9 h-9 rounded-full border-2 border-white bg-cover bg-center shadow-md avatar-stack" style="background-image: url('https://res.cloudinary.com/drpfy1syr/image/upload/v1778016810/pexels-liliana-drew-8555509_psd6ui.jpg'); background-color: #FF6B00;"></div>
+                </div>
+                <span class="text-[13px] text-gray-text font-normal">⭐⭐⭐⭐⭐ Déjà utilisé par +200 créateurs</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Large Creative Card Section -->
+    <section class="py-16 px-[5%] bg-bg reveal">
+        <div class="bg-card-cream rounded-[32px] py-16 px-10 max-w-[1100px] mx-auto text-center max-md:py-10 max-md:px-5">
+            <div class="mb-12 leading-[1.3]">
+                <span class="font-body text-[clamp(20px,3vw,28px)] font-bold text-dark block">Si tu crées déjà du contenu avec ton avatar IA, tu sais :</span>
+                <span class="font-body text-[clamp(20px,3vw,28px)] font-bold text-dark block">La partie la plus difficile, c'est pas la technique.</span>
+                <span class="font-body text-[clamp(20px,3vw,28px)] font-bold text-dark block font-title italic text-accent">C'est la direction créative.</span>
+            </div>
+
+            <div class="grid grid-cols-2 gap-6 max-md:grid-cols-1">
+                <img src="https://res.cloudinary.com/drpfy1syr/image/upload/v1778185736/Toujours_le_m%C3%AAme_look._1_u2v2jk.png" alt="Toujours le même look" class="w-full rounded-2xl shadow-[0_10px_30px_rgba(0,0,0,0.05)]">
+                <img src="https://res.cloudinary.com/drpfy1syr/image/upload/v1778185735/Toujours_le_m%C3%AAme_look._pr0ujv.png" alt="Direction Créative" class="w-full rounded-2xl shadow-[0_10px_30px_rgba(0,0,0,0.05)]">
+            </div>
+        </div>
+    </section>
+
+    <!-- Product & Pricing Section -->
+    <section class="py-16 px-[5%] bg-bg reveal">
+        <div class="grid grid-cols-[1.1fr_0.9fr] gap-[60px] max-w-[1200px] mx-auto items-start max-lg:grid-cols-1 max-lg:gap-10 max-md:px-0">
+            <!-- Left Column: Visual -->
+            <div>
+                <img src="https://res.cloudinary.com/drpfy1syr/image/upload/v1778188247/Titre_lkwkrw.png" alt="Bibliothèque de Prompts IA" class="w-full rounded-[20px] shadow-[0_10px_30px_rgba(0,0,0,0.08)] block">
+            </div>
+
+            <!-- Right Column: Details -->
+            <div class="flex flex-col">
+                <h2 class="font-body text-[38px] font-bold leading-[1.1] mb-2 max-md:text-[28px]">
+                    Bibliothèque de Prompts
+                    <span class="font-title italic text-accent text-[40px] block max-md:text-[30px]">Avatar IA</span>
+                </h2>
+
+                <div class="flex items-center gap-2 mb-5">
+                    <span class="text-[#FFB800] text-base tracking-[2px]">★★★★★</span>
+                    <span class="text-[13px] text-gray-text">Déjà utilisé par +200 créateurs</span>
+                </div>
+
+                <div class="flex items-center gap-4 mb-2">
+                    <span class="text-xl text-[#BBBBBB] line-through">8 000 FCFA</span>
+                    <span class="text-4xl font-bold text-dark">5 500 FCFA</span>
+                    <span class="bg-green-500 text-white text-xs font-bold py-1 px-2.5 rounded-md">PROMO</span>
+                </div>
+                <p class="text-[13px] text-gray-text mb-8">≈ $9 USD · ≈ 8€</p>
+
+                <div class="border-t border-[#EEEEEE] pt-6"></div>
+
+                <p class="text-[15px] text-gray-dark leading-relaxed mb-7">
+                    Accès instantané à une bibliothèque grandissante de prompts premium testés — homme, femme, hijab, tous les styles.
+                </p>
+
+                <h3 class="text-sm font-bold uppercase tracking-[1px] text-dark mb-4">Ce qui est inclus :</h3>
+                <div class="grid grid-cols-2 gap-3 mt-4 mb-9 max-md:grid-cols-1">
+                    <div class="flex items-center gap-2.5 text-sm text-dark">
+                        <div class="bg-dark text-white w-5 h-5 rounded flex items-center justify-center text-[10px] flex-shrink-0">✓</div> +100 prompts premium
+                    </div>
+                    <div class="flex items-center gap-2.5 text-sm text-dark">
+                        <div class="bg-dark text-white w-5 h-5 rounded flex items-center justify-center text-[10px] flex-shrink-0">✓</div> Lifestyle & Casual
+                    </div>
+                    <div class="flex items-center gap-2.5 text-sm text-dark">
+                        <div class="bg-dark text-white w-5 h-5 rounded flex items-center justify-center text-[10px] flex-shrink-0">✓</div> Éditorial & Magazine
+                    </div>
+                    <div class="flex items-center gap-2.5 text-sm text-dark">
+                        <div class="bg-dark text-white w-5 h-5 rounded flex items-center justify-center text-[10px] flex-shrink-0">✓</div> Studio & Luxe
+                    </div>
+                    <div class="flex items-center gap-2.5 text-sm text-dark">
+                        <div class="bg-dark text-white w-5 h-5 rounded flex items-center justify-center text-[10px] flex-shrink-0">✓</div> Hijab & Modest Fashion
+                    </div>
+                    <div class="flex items-center gap-2.5 text-sm text-dark">
+                        <div class="bg-dark text-white w-5 h-5 rounded flex items-center justify-center text-[10px] flex-shrink-0">✓</div> Professionnel & LinkedIn
+                    </div>
+                    <div class="flex items-center gap-2.5 text-sm text-dark">
+                        <div class="bg-dark text-white w-5 h-5 rounded flex items-center justify-center text-[10px] flex-shrink-0">✓</div> Mises à jour à vie
+                    </div>
+                    <div class="flex items-center gap-2.5 text-sm text-dark">
+                        <div class="bg-dark text-white w-5 h-5 rounded flex items-center justify-center text-[10px] flex-shrink-0">✓</div> Affiliation 60% incluse
+                    </div>
+                </div>
+
+                <a href="https://boutique.promptacademie.com/prd_fd9vg4/checkout" class="block w-full bg-accent text-white text-base font-bold text-center py-5 rounded-xl hover:bg-dark hover:-translate-y-0.5 transition-all duration-300">Accéder à la bibliothèque →</a>
+                <a href="#preview" class="block w-full bg-transparent text-gray-text text-sm text-center py-3.5 border border-border-light rounded-xl mt-3 hover:border-dark hover:text-dark transition-all duration-300">Voir un aperçu de la bibliothèque</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Affiliate Program Section -->
+    <section id="affiliate" class="py-16 px-[5%] bg-dark text-white reveal max-md:px-5">
+        <div class="grid grid-cols-2 gap-20 max-w-[1200px] mx-auto items-center max-lg:grid-cols-1 max-lg:gap-16">
+            <!-- Left Column: Content -->
+            <div>
+                <div class="inline-flex bg-accent text-white text-xs font-bold uppercase tracking-[2px] py-1.5 px-4 rounded-full mb-5">💰 Programme d'affiliation</div>
+                
+                <h2 class="leading-[1.1] mb-6">
+                    <span class="text-[clamp(42px,6vw,52px)] font-bold block">+60%</span>
+                    <span class="font-title italic text-[clamp(36px,5vw,44px)] block my-1.5">de commission</span>
+                    <span class="text-[28px] font-bold text-accent block">sur chaque partage.</span>
+                </h2>
+
+                <p class="text-base text-[#AAAAAA] leading-relaxed mb-8">
+                    Tu achètes la bibliothèque une seule fois. Tu reçois ton lien affilié immédiatement.
+                    Tu partages — tu gagnes 60% sur chaque vente.
+                </p>
+
+                <div class="flex flex-col gap-4 mb-10">
+                    <div class="flex items-center gap-3">
+                        <div class="w-8 h-8 bg-accent/15 text-accent rounded-full flex items-center justify-center font-bold flex-shrink-0">→</div>
+                        <span class="text-[15px] text-white">Accès immédiat à ton lien affilié</span>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <div class="w-8 h-8 bg-accent/15 text-accent rounded-full flex items-center justify-center font-bold flex-shrink-0">→</div>
+                        <span class="text-[15px] text-white">60% de commission par vente</span>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <div class="w-8 h-8 bg-accent/15 text-accent rounded-full flex items-center justify-center font-bold flex-shrink-0">→</div>
+                        <span class="text-[15px] text-white">Aucune limite de gains</span>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <div class="w-8 h-8 bg-accent/15 text-accent rounded-full flex items-center justify-center font-bold flex-shrink-0">→</div>
+                        <span class="text-[15px] text-white">Tu partages, tu dors, tu gagnes</span>
+                    </div>
+                </div>
+
+                <a href="https://boutique.promptacademie.com/prd_fd9vg4/checkout" class="inline-block bg-accent text-white text-base font-bold py-4 px-9 rounded-lg hover:bg-white hover:text-accent hover:-translate-y-0.5 transition-all duration-300 max-lg:w-full max-lg:text-center">Rejoindre le programme →</a>
+            </div>
+
+            <!-- Right Column: Visual Card -->
+            <div>
+                <div class="bg-white/5 border border-white/10 rounded-[20px] p-10 text-center backdrop-blur-[10px]">
+                    <div class="font-title italic font-bold text-[80px] text-accent leading-none">60%</div>
+                    <div class="text-lg text-white mt-2">de commission</div>
+                    
+                    <div class="h-px bg-white/10 my-7"></div>
+
+                    <div class="flex flex-col gap-6">
+                        <div class="flex flex-col gap-1">
+                            <span class="text-[28px] font-bold text-white">Immédiat</span>
+                            <span class="text-[13px] text-[#AAAAAA]">Accès au lien affilié</span>
+                        </div>
+                        <div class="flex flex-col gap-1">
+                            <span class="text-[28px] font-bold text-white">Illimité</span>
+                            <span class="text-[13px] text-[#AAAAAA]">Pas de plafond de gains</span>
+                        </div>
+                        <div class="flex flex-col gap-1">
+                            <span class="text-[28px] font-bold text-white">1 achat</span>
+                            <span class="text-[13px] text-[#AAAAAA]">Tu revends à l'infini</span>
+                        </div>
+                    </div>
+
+                    <p class="text-[13px] text-[#AAAAAA] mt-7">Lien affilié actif dès l'achat</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="reviews" class="bg-white py-20 overflow-hidden reveal">
+        <div class="max-w-[700px] mx-auto mb-16 text-center px-5 max-md:mb-10">
+            <div class="flex justify-center mb-4">
+                <div class="w-11 h-11 rounded-full border-[3px] border-white bg-cover bg-center shadow-md avatar-stack" style="background-image: url('https://res.cloudinary.com/drpfy1syr/image/upload/v1778016857/pexels-theo-decker-5945252_ddnt7l.jpg');"></div>
+                <div class="w-11 h-11 rounded-full border-[3px] border-white bg-cover bg-center shadow-md avatar-stack" style="background-image: url('https://res.cloudinary.com/drpfy1syr/image/upload/v1778016896/pexels-artempodrez-7048346_fnysqh.jpg');"></div>
+                <div class="w-11 h-11 rounded-full border-[3px] border-white bg-cover bg-center shadow-md avatar-stack" style="background-image: url('https://res.cloudinary.com/drpfy1syr/image/upload/v1778016849/pexels-goodcitizen-2058661_r01xnz.jpg');"></div>
+                <div class="w-11 h-11 rounded-full border-[3px] border-white bg-cover bg-center shadow-md avatar-stack" style="background-image: url('https://res.cloudinary.com/drpfy1syr/image/upload/v1778016823/pexels-ono-kosuki-5648098_ym64mf.jpg');"></div>
+                <div class="w-11 h-11 rounded-full border-[3px] border-white bg-cover bg-center shadow-md avatar-stack" style="background-image: url('https://res.cloudinary.com/drpfy1syr/image/upload/v1778016810/pexels-liliana-drew-8555509_psd6ui.jpg');"></div>
+            </div>
+            <p class="font-body text-sm text-gray-text mb-5">Rejoins les créateurs qui transforment leur avatar IA avec la bibliothèque.</p>
+            <h2 class="font-body text-[38px] font-bold text-dark mb-8 leading-[1.2] max-md:text-[30px]">
+                Des créateurs qui postent<br>
+                <span class="font-title italic text-accent text-[40px] max-md:text-[32px]">sans jamais se répéter.</span>
+            </h2>
+            <a href="https://boutique.promptacademie.com/prd_fd9vg4/checkout" class="inline-block bg-accent text-white font-body text-[15px] font-bold py-3.5 px-8 rounded-lg hover:bg-dark hover:-translate-y-0.5 transition-all duration-300">Accéder à la bibliothèque →</a>
+        </div>
+
+        <div class="marquee-wrapper bg-bg-warm py-16 flex flex-col gap-8">
+            <!-- Row 1: Left -->
+            <div class="flex overflow-hidden w-full">
+                <div class="marquee-track">
+                    <!-- Card 1 -->
+                    <div class="bg-white rounded-xl p-7 w-[380px] flex-shrink-0 border border-[#EEEEEE] shadow-[0_4px_15px_rgba(0,0,0,0.02)] flex flex-col max-md:w-[300px] max-md:p-5">
+                        <div class="font-title italic text-[40px] text-accent leading-none mb-3">"</div>
+                        <p class="font-body text-[15px] text-dark leading-relaxed mb-6 flex-grow">J'avais toujours le même look sur mon avatar. Maintenant je varie les styles chaque semaine sans effort.</p>
+                        <div class="flex items-center gap-3 border-t border-[#F5F5F5] pt-4">
+                            <div class="w-10 h-10 rounded-full bg-cover bg-center flex items-center justify-center text-white font-bold text-xs" style="background-image: url('https://res.cloudinary.com/drpfy1syr/image/upload/v1778016857/pexels-theo-decker-5945252_ddnt7l.jpg'); background-color: #FF6B00;"></div>
+                            <div class="flex flex-col">
+                                <span class="font-bold text-sm text-dark">Fatou D.</span>
+                                <span class="text-xs text-gray-text">Créatrice de contenu, Dakar</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="bg-white rounded-xl p-7 w-[380px] flex-shrink-0 border border-[#EEEEEE] shadow-[0_4px_15px_rgba(0,0,0,0.02)] flex flex-col max-md:w-[300px] max-md:p-5">
+                        <div class="font-title italic text-[40px] text-accent leading-none mb-3">"</div>
+                        <p class="font-body text-[15px] text-dark leading-relaxed mb-6 flex-grow">Le prompt hijab professionnel m'a donné exactement ce que je cherchais depuis des mois.</p>
+                        <div class="flex items-center gap-3 border-t border-[#F5F5F5] pt-4">
+                            <div class="w-10 h-10 rounded-full bg-cover bg-center flex items-center justify-center text-white font-bold text-xs" style="background-image: url('https://res.cloudinary.com/drpfy1syr/image/upload/v1778016896/pexels-artempodrez-7048346_fnysqh.jpg'); background-color: #0D0D0D;"></div>
+                            <div class="flex flex-col">
+                                <span class="font-bold text-sm text-dark">Imane K.</span>
+                                <span class="text-xs text-gray-text">Entrepreneuse, Casablanca</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 3 -->
+                    <div class="bg-white rounded-xl p-7 w-[380px] flex-shrink-0 border border-[#EEEEEE] shadow-[0_4px_15px_rgba(0,0,0,0.02)] flex flex-col max-md:w-[300px] max-md:p-5">
+                        <div class="font-title italic text-[40px] text-accent leading-none mb-3">"</div>
+                        <p class="font-body text-[15px] text-dark leading-relaxed mb-6 flex-grow">J'ai revendu la bibliothèque à 3 clients et rentabilisé mon achat dès le premier jour.</p>
+                        <div class="flex items-center gap-3 border-t border-[#F5F5F5] pt-4">
+                            <div class="w-10 h-10 rounded-full bg-cover bg-center flex items-center justify-center text-white font-bold text-xs" style="background-image: url('https://res.cloudinary.com/drpfy1syr/image/upload/v1778016849/pexels-goodcitizen-2058661_r01xnz.jpg'); background-color: #FF6B00;"></div>
+                            <div class="flex flex-col">
+                                <span class="font-bold text-sm text-dark">Kofi A.</span>
+                                <span class="text-xs text-gray-text">Freelance digital, Accra</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 4 -->
+                    <div class="bg-white rounded-xl p-7 w-[380px] flex-shrink-0 border border-[#EEEEEE] shadow-[0_4px_15px_rgba(0,0,0,0.02)] flex flex-col max-md:w-[300px] max-md:p-5">
+                        <div class="font-title italic text-[40px] text-accent leading-none mb-3">"</div>
+                        <p class="font-body text-[15px] text-dark leading-relaxed mb-6 flex-grow">Fini les heures à chercher le bon prompt. J'ouvre la bibliothèque, je copie, je génère.</p>
+                        <div class="flex items-center gap-3 border-t border-[#F5F5F5] pt-4">
+                            <div class="w-10 h-10 rounded-full bg-cover bg-center flex items-center justify-center text-white font-bold text-xs" style="background-image: url('https://res.cloudinary.com/drpfy1syr/image/upload/v1778016823/pexels-ono-kosuki-5648098_ym64mf.jpg'); background-color: #0D0D0D;"></div>
+                            <div class="flex flex-col">
+                                <span class="font-bold text-sm text-dark">Mariam S.</span>
+                                <span class="text-xs text-gray-text">Coach, Abidjan</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Clones -->
+                    <div class="bg-white rounded-xl p-7 w-[380px] flex-shrink-0 border border-[#EEEEEE] shadow-[0_4px_15px_rgba(0,0,0,0.02)] flex flex-col max-md:w-[300px] max-md:p-5"><div class="font-title italic text-[40px] text-accent leading-none mb-3">"</div><p class="font-body text-[15px] text-dark leading-relaxed mb-6 flex-grow">J'avais toujours le même look sur mon avatar. Maintenant je varie les styles chaque semaine sans effort.</p><div class="flex items-center gap-3 border-t border-[#F5F5F5] pt-4"><div class="w-10 h-10 rounded-full bg-cover bg-center flex items-center justify-center text-white font-bold text-xs" style="background-image: url('https://res.cloudinary.com/drpfy1syr/image/upload/v1778016857/pexels-theo-decker-5945252_ddnt7l.jpg');"></div><div class="flex flex-col"><span class="font-bold text-sm text-dark">Fatou D.</span></div></div></div>
+                    <div class="bg-white rounded-xl p-7 w-[380px] flex-shrink-0 border border-[#EEEEEE] shadow-[0_4px_15px_rgba(0,0,0,0.02)] flex flex-col max-md:w-[300px] max-md:p-5"><div class="font-title italic text-[40px] text-accent leading-none mb-3">"</div><p class="font-body text-[15px] text-dark leading-relaxed mb-6 flex-grow">Le prompt hijab professionnel m'a donné exactement ce que je cherchais depuis des mois.</p><div class="flex items-center gap-3 border-t border-[#F5F5F5] pt-4"><div class="w-10 h-10 rounded-full bg-cover bg-center flex items-center justify-center text-white font-bold text-xs" style="background-image: url('https://res.cloudinary.com/drpfy1syr/image/upload/v1778016896/pexels-artempodrez-7048346_fnysqh.jpg');"></div><div class="flex flex-col"><span class="font-bold text-sm text-dark">Imane K.</span></div></div></div>
+                </div>
+            </div>
+
+            <!-- Row 2: Right -->
+            <div class="flex overflow-hidden w-full">
+                <div class="marquee-track marquee-track-reverse">
+                    <!-- Card 5 -->
+                    <div class="bg-white rounded-xl p-7 w-[380px] flex-shrink-0 border border-[#EEEEEE] shadow-[0_4px_15px_rgba(0,0,0,0.02)] flex flex-col max-md:w-[300px] max-md:p-5">
+                        <div class="font-title italic text-[40px] text-accent leading-none mb-3">"</div>
+                        <p class="font-body text-[15px] text-dark leading-relaxed mb-6 flex-grow">Mon feed Instagram a totalement changé. Chaque post a un style différent et cohérent.</p>
+                        <div class="flex items-center gap-3 border-t border-[#F5F5F5] pt-4">
+                            <div class="w-10 h-10 rounded-full bg-cover bg-center flex items-center justify-center text-white font-bold text-xs" style="background-image: url('https://res.cloudinary.com/drpfy1syr/image/upload/v1778016810/pexels-liliana-drew-8555509_psd6ui.jpg'); background-color: #FF6B00;"></div>
+                            <div class="flex flex-col">
+                                <span class="font-bold text-sm text-dark">Youssef B.</span>
+                                <span class="text-xs text-gray-text">Entrepreneur, Tunis</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 6 -->
+                    <div class="bg-white rounded-xl p-7 w-[380px] flex-shrink-0 border border-[#EEEEEE] shadow-[0_4px_15px_rgba(0,0,0,0.02)] flex flex-col max-md:w-[300px] max-md:p-5">
+                        <div class="font-title italic text-[40px] text-accent leading-none mb-3">"</div>
+                        <p class="font-body text-[15px] text-dark leading-relaxed mb-6 flex-grow">La variété des catégories est incroyable — studio, luxe, hijab, casual. Tout y est.</p>
+                        <div class="flex items-center gap-3 border-t border-[#F5F5F5] pt-4">
+                            <div class="w-10 h-10 rounded-full bg-cover bg-center flex items-center justify-center text-white font-bold text-xs" style="background-image: url('https://res.cloudinary.com/drpfy1syr/image/upload/v1778016808/pexels-august-de-richelieu-7431801_kyde2r.jpg'); background-color: #0D0D0D;"></div>
+                            <div class="flex flex-col">
+                                <span class="font-bold text-sm text-dark">Aïcha D.</span>
+                                <span class="text-xs text-gray-text">Content Creator, Dakar</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 7 -->
+                    <div class="bg-white rounded-xl p-7 w-[380px] flex-shrink-0 border border-[#EEEEEE] shadow-[0_4px_15px_rgba(0,0,0,0.02)] flex flex-col max-md:w-[300px] max-md:p-5">
+                        <div class="font-title italic text-[40px] text-accent leading-none mb-3">"</div>
+                        <p class="font-body text-[15px] text-dark leading-relaxed mb-6 flex-grow">Je génère 10 visuels différents en 5 minutes. Avant ça me prenait une journée entière.</p>
+                        <div class="flex items-center gap-3 border-t border-[#F5F5F5] pt-4">
+                            <div class="w-10 h-10 rounded-full bg-cover bg-center flex items-center justify-center text-white font-bold text-xs" style="background-image: url('https://res.cloudinary.com/drpfy1syr/image/upload/v1778016777/pexels-bello-olamide-38387724-11728801_l2pllo.jpg'); background-color: #FF6B00;"></div>
+                            <div class="flex flex-col">
+                                <span class="font-bold text-sm text-dark">Samba N.</span>
+                                <span class="text-xs text-gray-text">Entrepreneur, Saint-Louis</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 8 -->
+                    <div class="bg-white rounded-xl p-7 w-[380px] flex-shrink-0 border border-[#EEEEEE] shadow-[0_4px_15px_rgba(0,0,0,0.02)] flex flex-col max-md:w-[300px] max-md:p-5">
+                        <div class="font-title italic text-[40px] text-accent leading-none mb-3">"</div>
+                        <p class="font-body text-[15px] text-dark leading-relaxed mb-6 flex-grow">Mon avatar a enfin une vraie direction créative. Mes clients pensent que j'ai un photographe.</p>
+                        <div class="flex items-center gap-3 border-t border-[#F5F5F5] pt-4">
+                            <div class="w-10 h-10 rounded-full bg-cover bg-center flex items-center justify-center text-white font-bold text-xs" style="background-image: url('https://res.cloudinary.com/drpfy1syr/image/upload/v1778016776/pexels-baobab-photos-2149382979-30938731_xv0jao.jpg'); background-color: #0D0D0D;"></div>
+                            <div class="flex flex-col">
+                                <span class="font-bold text-sm text-dark">Lina M.</span>
+                                <span class="text-xs text-gray-text">Coach Business, Paris</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Clones -->
+                    <div class="bg-white rounded-xl p-7 w-[380px] flex-shrink-0 border border-[#EEEEEE] shadow-[0_4px_15px_rgba(0,0,0,0.02)] flex flex-col max-md:w-[300px] max-md:p-5"><div class="font-title italic text-[40px] text-accent leading-none mb-3">"</div><p class="font-body text-[15px] text-dark leading-relaxed mb-6 flex-grow">Mon feed Instagram a totalement changé. Chaque post a un style différent et cohérent.</p><div class="flex items-center gap-3 border-t border-[#F5F5F5] pt-4"><div class="w-10 h-10 rounded-full bg-cover bg-center flex items-center justify-center text-white font-bold text-xs" style="background-image: url('https://res.cloudinary.com/drpfy1syr/image/upload/v1778016810/pexels-liliana-drew-8555509_psd6ui.jpg');"></div><div class="flex flex-col"><span class="font-bold text-sm text-dark">Youssef B.</span></div></div></div>
+                    <div class="bg-white rounded-xl p-7 w-[380px] flex-shrink-0 border border-[#EEEEEE] shadow-[0_4px_15px_rgba(0,0,0,0.02)] flex flex-col max-md:w-[300px] max-md:p-5"><div class="font-title italic text-[40px] text-accent leading-none mb-3">"</div><p class="font-body text-[15px] text-dark leading-relaxed mb-6 flex-grow">La variété des catégories est incroyable — studio, luxe, hijab, casual. Tout y est.</p><div class="flex items-center gap-3 border-t border-[#F5F5F5] pt-4"><div class="w-10 h-10 rounded-full bg-cover bg-center flex items-center justify-center text-white font-bold text-xs" style="background-image: url('https://res.cloudinary.com/drpfy1syr/image/upload/v1778016808/pexels-august-de-richelieu-7431801_kyde2r.jpg');"></div><div class="flex flex-col"><span class="font-bold text-sm text-dark">Aïcha D.</span></div></div></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section class="py-20 px-[5%] bg-bg reveal max-md:py-16 max-md:px-5">
+        <div class="max-w-[900px] mx-auto bg-dark rounded-[20px] py-20 px-10 text-center text-white max-md:py-16 max-md:px-6">
+            <h2 class="mb-4 leading-[1.1]">
+                <span class="font-body text-[clamp(32px,5vw,42px)] font-bold block">Ton avatar, tous les styles.</span>
+                <span class="font-title italic text-[clamp(34px,5.5vw,44px)] text-accent block">À l'infini.</span>
+            </h2>
+            <p class="font-body text-base text-white/70 max-w-[500px] mx-auto mb-10 leading-relaxed">
+                Accède à la bibliothèque maintenant et transforme ton avatar IA à l'infini — nouveaux looks, nouvelles ambiances, chaque semaine.
+            </p>
+            <a href="https://boutique.promptacademie.com/prd_fd9vg4/checkout" class="inline-block bg-accent text-white font-body text-[17px] font-bold py-[18px] px-12 rounded-lg hover:bg-white hover:text-accent transition-all duration-300 max-md:w-full">Accéder à la bibliothèque →</a>
+            <p class="font-body text-[13px] text-gray-text mt-5">⭐⭐⭐⭐⭐ · Accès immédiat · 5 500 FCFA</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-border-light py-6 px-[5%]">
+        <div class="max-w-[1200px] mx-auto flex justify-between items-center max-md:flex-col max-md:gap-4 max-md:text-center">
+            <div class="flex flex-col">
+                <span class="font-body font-bold text-sm text-dark">AVATAR CASH SYSTEM</span>
+                <p class="font-body text-xs text-gray-text mt-1">© 2026 Avatar Cash System. Tous droits réservés.</p>
+            </div>
+            
+            <div class="flex gap-4">
+                <a href="#" class="text-dark hover:text-accent transition-colors duration-300" aria-label="Instagram">
+                    <i class="fab fa-instagram text-xl"></i>
+                </a>
+                <a href="#" class="text-dark hover:text-accent transition-colors duration-300" aria-label="TikTok">
+                    <i class="fab fa-tiktok text-xl"></i>
+                </a>
+                <a href="#" class="text-dark hover:text-accent transition-colors duration-300" aria-label="YouTube">
+                    <i class="fab fa-youtube text-xl"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    });
+</script>
